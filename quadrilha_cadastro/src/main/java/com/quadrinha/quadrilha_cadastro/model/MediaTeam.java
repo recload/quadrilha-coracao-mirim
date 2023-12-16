@@ -2,6 +2,7 @@ package com.quadrinha.quadrilha_cadastro.model;
 
 import java.util.List;
 
+import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -14,6 +15,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @AllArgsConstructor
+@Entity
 public class MediaTeam {
 
     private String photography;
