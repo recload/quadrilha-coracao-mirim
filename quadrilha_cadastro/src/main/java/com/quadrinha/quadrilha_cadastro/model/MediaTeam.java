@@ -5,6 +5,8 @@ import java.util.List;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -23,5 +25,8 @@ public class MediaTeam {
     private Long id;
     
 
+    
+    @OneToMany
+    @JoinColumn(name = "media_team")
     private List<Volunteers> volunterrs;
 }
