@@ -72,4 +72,17 @@ public class volunteersService {
     }    
 
     //deletar
+
+    public ResponseEntity<?> delete(int id){
+        if(vRepository.countById(id) == 0){
+            modelResponse.setMensagem("Item informado não existe");
+            return new ResponseEntity<>(vRepository, HttpStatus.BAD_REQUEST);
+        }else{
+            Volunteers volun = vRepository.findById(id);
+            vRepository.delete(volun);
+            modelResponse.setMensagem("Item deletado com sucesso");
+            return new ResponseEntity<>(modelResponse, HttpStatus.OK);
+        }
+
+    }
 }

@@ -8,5 +8,8 @@ import com.quadrinha.quadrilha_cadastro.model.Volunteers;
 @Repository
 public interface volunteersRepository extends CrudRepository<Volunteers,Long> {
 
+    int countById(int id);
+
+    Volunteers findById(int id);
     
 } 
