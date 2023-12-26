@@ -26,7 +26,6 @@ public class Volunteers {
     private Integer cpf;
     private Integer phoneNumber;
     private String address;
-    private String recommendation;
     private String healthProblems;
     private String relationship;
 }
