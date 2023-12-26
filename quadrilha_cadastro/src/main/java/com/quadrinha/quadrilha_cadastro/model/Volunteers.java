@@ -13,18 +13,18 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @Entity
-@Table(name = "volunteer")
+@Table(name = "volunteers")
 public class Volunteers {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String name;
-    private int age;
-    private int dateOfBirth;
-    private int rg;
-    private int cpf;
-    private int phoneNumber;
+    private Integer age;
+    private Integer dateOfBirth;
+    private Integer rg;
+    private Integer cpf;
+    private Integer phoneNumber;
     private String address;
     private String recommendation;
     private String healthProblems;
