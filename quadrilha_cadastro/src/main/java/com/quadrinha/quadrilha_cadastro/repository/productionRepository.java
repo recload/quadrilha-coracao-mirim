@@ -5,7 +5,11 @@ import org.springframework.stereotype.Repository;
 
 import com.quadrinha.quadrilha_cadastro.model.ProductionTeam;
 
+
 @Repository
 public interface productionRepository  extends CrudRepository<ProductionTeam,Long>{
-    
+
+    int countById(int id);
+
+    ProductionTeam findById(int id);
 }
